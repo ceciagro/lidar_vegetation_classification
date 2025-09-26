@@ -1,0 +1,26 @@
+{
+  "pipeline": [
+    "/Users/cecilialedesma/Library/Mobile Documents/com~apple~CloudDocs/projects_2025/lidar_vegetation_classification/notebooks/data/processed/veg_gt2m.las",
+    {
+      "type": "filters.dbscan",
+      "min_points": 20,
+      "eps": 0.8,
+      "dimensions": "X,Y,Z"
+    },
+    {
+      "type": "writers.las",
+      "filename": "/Users/cecilialedesma/Library/Mobile Documents/com~apple~CloudDocs/projects_2025/lidar_vegetation_classification/notebooks/data/processed/veg_gt2m_dbscan.las",
+      "minor_version": 4,
+      "dataformat_id": 6,
+      "extra_dims": "all"
+    },
+    {
+      "type": "writers.text",
+      "filename": "/Users/cecilialedesma/Library/Mobile Documents/com~apple~CloudDocs/projects_2025/lidar_vegetation_classification/notebooks/data/processed/veg_gt2m_dbscan.csv",
+      "format": "csv",
+      "order": "X,Y,Z,HeightAboveGround,ClusterID",
+      "keep_unspecified": false,
+      "quote_header": false
+    }
+  ]
+}

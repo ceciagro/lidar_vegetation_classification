@@ -1,0 +1,16 @@
+{
+  "pipeline": [
+    "/Users/cecilialedesma/Library/Mobile Documents/com~apple~CloudDocs/projects_2025/lidar_vegetation_classification/notebooks/data/processed/sample_hag.las",
+    {
+      "type": "filters.range",
+      "limits": "HeightAboveGround[2:]"
+    },
+    {
+      "type": "writers.las",
+      "filename": "/Users/cecilialedesma/Library/Mobile Documents/com~apple~CloudDocs/projects_2025/lidar_vegetation_classification/notebooks/data/processed/veg_gt2m.las",
+      "minor_version": 4,
+      "dataformat_id": 6,
+      "extra_dims": "all"
+    }
+  ]
+}

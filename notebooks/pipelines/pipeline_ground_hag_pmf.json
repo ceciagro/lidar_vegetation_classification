@@ -1,0 +1,25 @@
+{
+  "pipeline": [
+    {
+      "type": "readers.las",
+      "filename": "/Users/cecilialedesma/Library/Mobile Documents/com~apple~CloudDocs/projects_2025/lidar_vegetation_classification/notebooks/data/raw/sample.laz"
+    },
+    {
+      "type": "filters.pmf",
+      "max_window_size": 18,
+      "slope": 0.15,
+      "initial_distance": 0.5,
+      "cell_size": 1.0
+    },
+    {
+      "type": "filters.hag_delaunay"
+    },
+    {
+      "type": "writers.las",
+      "filename": "/Users/cecilialedesma/Library/Mobile Documents/com~apple~CloudDocs/projects_2025/lidar_vegetation_classification/notebooks/data/processed/sample_hag_pmf.las",
+      "minor_version": 4,
+      "dataformat_id": 6,
+      "extra_dims": "all"
+    }
+  ]
+}
