@@ -1,23 +1,24 @@
-# === Datos grandes: NO versionar ===
-raw/
-data/raw/
-data/processed/
-notebooks/data/
-notebooks/figures/
+# Python / notebooks
+__pycache__/
+.ipynb_checkpoints/
 
-# Formatos pesados comunes (solo si llegan a colarse fuera de esas carpetas)
-*.las
-*.laz
-*.tif
-*.tiff
-*.parquet
+# Environments / IDE
+.venv/
+env/
+.conda/
+.vscode/
 
-# Jupyter / Python
-*.ipynb_checkpoints/
-**/__pycache__/
-*.pyc
+# Datos pesados (mantén solo sample si querés)
+data/raw/*
+!data/raw/sample.laz
 
-# Entornos / OS
-.env
-.venv
-.DS_Store
+data/processed/*
+notebooks/data/raw/*
+notebooks/data/processed/*
+notebooks/figures/*
+
+# Otros
+*.log
+*.tmp
+*.DS_Store
+
