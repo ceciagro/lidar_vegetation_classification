@@ -1,0 +1,17 @@
+name: lidar-veg
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - ipykernel
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - pandas
+  - scikit-learn
+  - scipy
+  - gdal=3.8
+  - pdal=2.6
+  - pyproj
+prefix: /Users/cecilialedesma/anaconda3/envs/lidar-veg
